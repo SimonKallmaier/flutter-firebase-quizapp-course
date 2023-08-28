@@ -70,7 +70,7 @@ class StartPage extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text(quiz.title, style: Theme.of(context).textTheme.headline4),
+          Text(quiz.title, style: Theme.of(context).textTheme.headlineMedium),
           const Divider(),
           Expanded(child: Text(quiz.description)),
           ButtonBar(
@@ -174,7 +174,7 @@ class QuestionPage extends StatelessWidget {
                             margin: const EdgeInsets.only(left: 16),
                             child: Text(
                               opt.value,
-                              style: Theme.of(context).textTheme.bodyText2,
+                              style: Theme.of(context).textTheme.bodyMedium,
                             ),
                           ),
                         )
@@ -211,7 +211,7 @@ class QuestionPage extends StatelessWidget {
               ),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                    primary: correct ? Colors.green : Colors.red),
+                    backgroundColor: correct ? Colors.green : Colors.red),
                 child: Text(
                   correct ? 'Onward!' : 'Try Again',
                   style: const TextStyle(
